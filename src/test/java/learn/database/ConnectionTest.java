@@ -24,9 +24,11 @@ public class ConnectionTest {
 
     @Test
     void Connection() {
-      String  jdbcUrl = "jdbc:mysql://localhost:3306/javadatabase";
+      String  jdbcUrl = "jdbc:mysql://localhost:3306/javadatabase?serverTimezome=Asia/Jakarta";
       String  username = "root";
       String  password = "secret";
+      //harus ditutup koneksinya yhh dengan connection.close();
+      //bisa juga pake try with resource try () {}
       try {
         Connection connection = DriverManager.getConnection(jdbcUrl, username, password);
         System.out.println("success connect");
