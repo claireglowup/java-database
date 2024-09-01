@@ -19,14 +19,14 @@ public class ConnectionPoolTest {
         config.setMaximumPoolSize(10);
         config.setMinimumIdle(5);
         config.setIdleTimeout(60_000);
-        config.setMaxLifetime(10 * 60_000);
+        config.setMaxLifetime(10 * 60_000);                                 
 
         HikariDataSource dataSource = new HikariDataSource(config);
         try {
             dataSource.getConnection();
             System.out.println("connection success");         
         } catch (Exception e) {
-            e.printStackTrace();
+            e.printStackTrace();        
         }
     }
 }
